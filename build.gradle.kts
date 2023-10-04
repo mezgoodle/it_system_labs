@@ -24,6 +24,7 @@ dependencies {
     implementation("org.jetbrains.kotlin:kotlin-reflect")
     developmentOnly("org.springframework.boot:spring-boot-devtools")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
+    implementation("org.springframework.boot:spring-boot-starter-thymeleaf")
     implementation("org.postgresql:postgresql:42.6.0")
     implementation("org.flywaydb:flyway-core:9.22.2")
     implementation ("org.springframework.boot:spring-boot-starter-data-jdbc")
