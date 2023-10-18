@@ -1,6 +1,8 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 
+import Error from "./components/Error";
+
 function App() {
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -24,12 +26,12 @@ function App() {
   }
 
   if (error) {
-    return <div>Error: {error.message}</div>;
+    return <Error error_message={error.message} />;
   }
 
   return (
     <>
-      <div className="h1">Hello</div>
+      <div className="h1 text-center">Open Data project</div>
       <ul>
         {data.map((user) => (
           <li key={user.id}>{user.name}</li>
