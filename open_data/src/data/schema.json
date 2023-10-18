@@ -1,0 +1,75 @@
+﻿{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/root.json",
+  "type": "array",
+  "title": "Схема файлів набору  даних  'Інформація про викрадені/втрачені паспорти громадянина України' ab09ed00-4f51-4f6c-a2f7-1b2fb118be0f",
+  "items": {
+    "$id": "#/items",
+    "type": "object",
+    "title": "Схема запису даних",
+    "required": [
+      "ID",
+      "OVD",
+      "D_SERIES",
+      "D_NUMBER",
+      "D_TYPE",
+      "D_STATUS",
+      "THEFT_DATA",
+      "INSERT_DATE"
+    ],
+    "properties": {
+      "ID": {
+        "$id": "#/items/properties/ID",
+        "type": "string",
+        "title": "Унікальний ідентифікатор запису",
+        "default": "",
+        "pattern": "^(.*)$"
+      },
+      "OVD": {
+        "$id": "#/items/properties/OVD",
+        "type": "string",
+        "title": "Назва підрозділу, що зареєстрував інформацію",
+        "pattern": "^(.*)$"
+      },
+      "D_SERIES": {
+        "$id": "#/items/properties/D_SERIES",
+        "type": "string",
+        "title": "Серія документу",
+        "pattern": "^(.*)$"
+      },
+      "D_NUMBER": {
+        "$id": "#/items/properties/D_NUMBER",
+        "type": "string",
+        "title": "Номер документу",
+        "pattern": "^(.*)$"
+      },
+      "D_TYPE": {
+        "$id": "#/items/properties/D_TYPE",
+        "type": "string",
+        "title": "Тип документу",
+        "pattern": "^(.*)$"
+      },
+      "D_STATUS": {
+        "$id": "#/items/properties/D_STATUS",
+        "type": "string",
+        "title": "Статус документу",
+        "pattern": "^(.*)$"
+      },
+      "THEFT_DATA": {
+        "$id": "#/items/properties/THEFT_DATA",
+        "type": "string",
+        "title": "Дата заяви про викрадення/втрату",
+        "examples": ["2004-03-29T00:00:00"],
+        "pattern": "^(.*)$"
+      },
+      "INSERT_DATE": {
+        "$id": "#/items/properties/INSERT_DATE",
+        "type": "string",
+        "title": "Дата внесення інформації",
+        "examples": ["2004-03-29T00:00:00"],
+        "pattern": "^(.*)$"
+      }
+    }
+  }
+}
