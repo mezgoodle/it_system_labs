@@ -3,18 +3,15 @@ import React from "react";
 const DataTable = ({ data }) => {
   return (
     <>
-      <h2 className="text-center">First ten objects</h2>
-      <table className="table">
+      <h3 className="text-center">First ten objects</h3>
+      <table className="table table-hover">
         <thead>
           <tr>
-            <th scope="col">ID</th>
-            <th scope="col">OVD</th>
-            <th scope="col">D_SERIES</th>
-            <th scope="col">D_NUMBER</th>
-            <th scope="col">D_TYPE</th>
-            <th scope="col">D_STATUS</th>
-            <th scope="col">THEFT_DATA</th>
-            <th scope="col">INSERT_DATE</th>
+            {Object.keys(data[0]).map((key) => (
+              <th key={key} scope="col">
+                {key}
+              </th>
+            ))}
           </tr>
         </thead>
         <tbody>

@@ -46,7 +46,10 @@ function App() {
 
   return (
     <>
-      <div className="h1 text-center">Open Data project</div>
+      <div className="h2 text-center">
+        Інформація про викрадені/втрачені/недійсні паспорти громадянина України
+        для виїзду за кордон
+      </div>
       <Schema properties={properties} />
       <hr />
       <p className="h3">Length of data: {data.length}</p>

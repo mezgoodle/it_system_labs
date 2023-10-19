@@ -3,8 +3,8 @@ import React from "react";
 const Schema = ({ properties }) => {
   return (
     <>
-      <h2 className="text-center">Schema</h2>
-      <table className="table">
+      <h3 className="text-center">Schema</h3>
+      <table className="table table-hover">
         <thead>
           <tr>
             <th scope="col">Key</th>
