@@ -21,17 +21,7 @@ const DateLineChart = ({ data }) => {
     };
   });
   return (
-    <LineChart
-      width={500}
-      height={300}
-      data={resultArray}
-      margin={{
-        top: 5,
-        right: 30,
-        left: 20,
-        bottom: 5,
-      }}
-    >
+    <LineChart width={600} height={300} data={resultArray}>
       <CartesianGrid strokeDasharray="3 3" />
       <XAxis />
       <YAxis />
@@ -40,8 +30,8 @@ const DateLineChart = ({ data }) => {
       <Line
         type="monotone"
         dataKey="daysDifference"
-        stroke="#8884d8"
-        activeDot={{ r: 8 }}
+        stroke="black"
+        activeDot={{ r: 10 }}
       />
     </LineChart>
   );

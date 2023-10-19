@@ -17,6 +17,7 @@ function App() {
   const [properties, setProperties] = useState({});
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [range, setRange] = useState(10);
 
   useEffect(() => {
     fetchSchema();
@@ -71,7 +72,28 @@ function App() {
           </div>
         </div>
       </div>
-      <DateLineChart data={data.slice(0, 20)} />
+      <div className="container">
+        <div className="row">
+          <div className="col">
+            <p className="text-center h4">
+              К-сть днів між датою заяви та датою внесення
+            </p>
+            <DateLineChart data={data.slice(0, range)} />
+          </div>
+          <div className="col">
+            <p className="text-center h4">
+              Введіть максимальну кількість данних
+            </p>
+            <input
+              type="text"
+              className="form-control"
+              placeholder="Enter range"
+              value={range}
+              onChange={(e) => setRange(e.target.value)}
+            />
+          </div>
+        </div>
+      </div>
     </>
   );
 }
