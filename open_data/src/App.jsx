@@ -7,6 +7,7 @@ import StatusBarChart from "./components/StatusBarChart";
 import TypeBarChart from "./components/TypeBarChart";
 import SeriesBarChart from "./components/SeriesBarChart";
 import OVDBarChart from "./components/OVDBarChart";
+import DateLineChart from "./components/DateLineChart";
 
 import schema_data from "./data/schema.json";
 import json_data from "./data/data.json";
@@ -70,6 +71,7 @@ function App() {
           </div>
         </div>
       </div>
+      <DateLineChart data={data.slice(0, 20)} />
     </>
   );
 }
