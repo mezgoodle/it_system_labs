@@ -26,12 +26,20 @@ function App() {
 
   const fetchData = () => {
     setIsLoading(true);
+    if (json_data.length === 0) {
+      setError({ message: "No data" });
+      return;
+    }
     setData(json_data);
     setIsLoading(false);
   };
 
   const fetchSchema = () => {
     setIsLoading(true);
+    if (schema_data.items.properties.length === 0) {
+      setError({ message: "No schema" });
+      return;
+    }
     setProperties(schema_data.items.properties);
     setIsLoading(false);
   };
